@@ -1,0 +1,1 @@
+Phoca Cart CashOnDelivery Plugin is Joomla! CMS extension. Plugin - payment method for Phoca Cart component.
