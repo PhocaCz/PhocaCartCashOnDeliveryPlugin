@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="pcp" method="upgrade" version="3">
+	<name>plg_pcp_cash_on_delivery</name>
+	<creationDate>23/09/2014</creationDate>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<authorEmail></authorEmail>
+	<authorUrl>www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<version>3.0.0</version>
+
+	
+	<description>PLG_PCP_CASH_ON_DELIVERY_DESCRIPTION</description>
+
+	
+	<files>
+		<filename plugin="cash_on_delivery">cash_on_delivery.php</filename>
+		<filename plugin="cash_on_delivery">cash_on_delivery.xml</filename>
+		<filename plugin="cash_on_delivery">index.html</filename>
+		<folder>helpers</folder>
+	</files>
+
+	
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pcp_cash_on_delivery.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_pcp_cash_on_delivery.sys.ini</language>
+	</languages>
+	<administration>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.plg_pcp_cash_on_delivery.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.plg_pcp_cash_on_delivery.sys.ini</language>
+		</languages>
+	</administration>
+	
+	<form>
+
+
+</form>
+</extension>
