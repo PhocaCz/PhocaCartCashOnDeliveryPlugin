@@ -7,18 +7,33 @@
  * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
  */
 
-defined('_JEXEC') or die('Restricted access');
+defined('_JEXEC') or die;
 jimport( 'joomla.plugin.plugin' );
 jimport( 'joomla.filesystem.file');
 jimport( 'joomla.html.parameter' );
+
+JLoader::registerPrefix('Phocacart', JPATH_ADMINISTRATOR . '/components/com_phocacart/libraries/phocacart');
+
 class plgPCPCash_On_Delivery extends JPlugin
 {
-	function plgPCPCash_On_Delivery(& $subject, $config) {
+	function __construct(& $subject, $config) {
 		parent :: __construct($subject, $config);
 	}
 	
-	function PCPbeforeProceedToPayment(&$proceed) {
+	/**
+	 * Proceed to payment - some method do not have proceed to payment gateway like e.g. cash on delivery
+	 *
+	 * @param   integer	$proceed  Proceed or not proceed to payment gateway
+	 * @param   string	$message  Custom message array set by plugin to override standard messages made by component
+	 *
+	 * @return  boolean  True
+	 */
+	
+	function PCPbeforeProceedToPayment(&$proceed, &$message) {
+		
 		$proceed = 0;
+		$message = array();
+		
 		return true;
 	}
 	
