@@ -26,6 +26,8 @@ Phoca Cart Payment - Cash On Delivery Plugin - payment method for Phoca Cart com
 
 
 
+
+
 ## Support
 
 [Phoca Forum](https://www.phoca.cz/forum)
@@ -54,7 +56,7 @@ Phoca Cart Payment - Cash On Delivery Plugin - payment method for Phoca Cart com
 
 ## Version
 
-3.4.0
+3.5.0
 
 
 
