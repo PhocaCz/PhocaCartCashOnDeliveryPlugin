@@ -37,5 +37,20 @@ class plgPCPCash_On_Delivery extends JPlugin
 		return true;
 	}
 	
+	function PCPbeforeSaveOrder(&$statusId, $pid) {
+
+
+        // Status set by payment method in case of order (pending, confirmed, completed)
+        // In case of POS cash, it is always completed
+        $paymentTemp		= new PhocacartPayment();
+        $paymentOTemp 		= $paymentTemp->getPaymentMethod((int)$pid );
+        $paramsPaymentTemp	= $paymentOTemp->params;
+        $statusId		    = $paramsPaymentTemp->get('default_order_status', 1);
+
+		//$statusId = 6;
+
+		return true;
+	}
+	
 }
 ?>
