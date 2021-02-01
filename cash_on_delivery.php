@@ -16,10 +16,13 @@ JLoader::registerPrefix('Phocacart', JPATH_ADMINISTRATOR . '/components/com_phoc
 
 class plgPCPCash_On_Delivery extends JPlugin
 {
+	
+	protected $name 	= 'cash_on_delivery';
+	
 	function __construct(& $subject, $config) {
 		parent :: __construct($subject, $config);
 	}
-	
+
 	/**
 	 * Proceed to payment - some method do not have proceed to payment gateway like e.g. cash on delivery
 	 *
@@ -28,17 +31,24 @@ class plgPCPCash_On_Delivery extends JPlugin
 	 *
 	 * @return  boolean  True
 	 */
-	
-	function PCPbeforeProceedToPayment(&$proceed, &$message) {
+
+	function PCPbeforeProceedToPayment(&$proceed, &$message, $eventData) {
 		
+		if (!isset($eventData['pluginname']) || isset($eventData['pluginname']) && $eventData['pluginname'] != $this->name) {
+			return false;
+		}
+
 		$proceed = 0;
 		$message = array();
-		
+
 		return true;
 	}
-	
-	function PCPbeforeSaveOrder(&$statusId, $pid) {
 
+	function PCPbeforeSaveOrder(&$statusId, $pid, $eventData) {
+
+		if (!isset($eventData['pluginname']) || isset($eventData['pluginname']) && $eventData['pluginname'] != $this->name) {
+			return false;
+		}
 
         // Status set by payment method in case of order (pending, confirmed, completed)
         // In case of POS cash, it is always completed
@@ -51,6 +61,6 @@ class plgPCPCash_On_Delivery extends JPlugin
 
 		return true;
 	}
-	
+
 }
 ?>

@@ -2,7 +2,7 @@
 
 
 
-![Phoca Cart Cash On Delivery Plugin](https://github.com/PhocaCz/PhocaCartCashOnDeliveryPlugin/blob/master/cash_on_delivery.png)
+![Phoca Cart Cash On Delivery Plugin](https://github.com/PhocaCz/PhocaCartCashOnDeliveryPlugin/blob/master/cash_on_delivery.png?raw=true)
 
 # Phoca Cart Cash On Delivery Plugin
 
@@ -56,7 +56,7 @@ Phoca Cart Payment - Cash On Delivery Plugin - payment method for Phoca Cart com
 
 ## Version
 
-3.5.4
+3.5.5
 
 
 
