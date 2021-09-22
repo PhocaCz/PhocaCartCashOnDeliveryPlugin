@@ -16,9 +16,9 @@ JLoader::registerPrefix('Phocacart', JPATH_ADMINISTRATOR . '/components/com_phoc
 
 class plgPCPCash_On_Delivery extends JPlugin
 {
-	
+
 	protected $name 	= 'cash_on_delivery';
-	
+
 	function __construct(& $subject, $config) {
 		parent :: __construct($subject, $config);
 	}
@@ -33,7 +33,7 @@ class plgPCPCash_On_Delivery extends JPlugin
 	 */
 
 	function PCPbeforeProceedToPayment(&$proceed, &$message, $eventData) {
-		
+
 		if (!isset($eventData['pluginname']) || isset($eventData['pluginname']) && $eventData['pluginname'] != $this->name) {
 			return false;
 		}
@@ -61,6 +61,42 @@ class plgPCPCash_On_Delivery extends JPlugin
 
 		return true;
 	}
+
+	function PCPbeforeShowPossiblePaymentMethod(&$active, $params, $eventData){
+
+		if (!isset($eventData['pluginname']) || isset($eventData['pluginname']) && $eventData['pluginname'] != $this->name) {
+			return false;
+		}
+
+		// Payment plugin can disable/deactivate current payment method in possible payment method list based on own rules
+		// $active = false;
+
+		return true;
+
+	}
+
+	function PCPonInfoViewDisplayContent($data, $eventData){
+
+		if (!isset($eventData['pluginname']) || isset($eventData['pluginname']) && $eventData['pluginname'] != $this->name) {
+			return false;
+		}
+
+		$output = array();
+		//$output['content'] = '';
+
+		return $output;
+
+	}
+
+
+	/*
+	 * Payment plugin wants to display some information on Item View (Detail View) page
+	 * */
+	/*
+	public function PCPonItemBeforeEndPricePanel($context, &$item, &$params) {
+		//return "<div></div>";
+	}
+	*/
 
 }
 ?>
