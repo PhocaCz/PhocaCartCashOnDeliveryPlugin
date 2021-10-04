@@ -60,7 +60,7 @@ Phoca Cart Payment - Cash On Delivery Plugin - payment method for Phoca Cart com
 
 ## Version
 
-3.5.7
+3.5.8
 
 
 
