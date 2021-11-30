@@ -32,7 +32,7 @@ class plgPCPCash_On_Delivery extends JPlugin
 	 * @return  boolean  True
 	 */
 
-	function PCPbeforeProceedToPayment(&$proceed, &$message, $eventData) {
+	function onPCPbeforeProceedToPayment(&$proceed, &$message, $eventData) {
 
 		if (!isset($eventData['pluginname']) || isset($eventData['pluginname']) && $eventData['pluginname'] != $this->name) {
 			return false;
@@ -44,7 +44,7 @@ class plgPCPCash_On_Delivery extends JPlugin
 		return true;
 	}
 
-	function PCPbeforeSaveOrder(&$statusId, $pid, $eventData) {
+	function onPCPbeforeSaveOrder(&$statusId, $pid, $eventData) {
 
 		if (!isset($eventData['pluginname']) || isset($eventData['pluginname']) && $eventData['pluginname'] != $this->name) {
 			return false;
@@ -62,7 +62,7 @@ class plgPCPCash_On_Delivery extends JPlugin
 		return true;
 	}
 
-	function PCPbeforeShowPossiblePaymentMethod(&$active, $params, $eventData){
+	function onPCPbeforeShowPossiblePaymentMethod(&$active, $params, $eventData){
 
 		if (!isset($eventData['pluginname']) || isset($eventData['pluginname']) && $eventData['pluginname'] != $this->name) {
 			return false;
@@ -75,7 +75,7 @@ class plgPCPCash_On_Delivery extends JPlugin
 
 	}
 
-	function PCPonInfoViewDisplayContent($data, $eventData){
+	function onPCPonInfoViewDisplayContent($data, $eventData){
 
 		if (!isset($eventData['pluginname']) || isset($eventData['pluginname']) && $eventData['pluginname'] != $this->name) {
 			return false;
@@ -93,7 +93,7 @@ class plgPCPCash_On_Delivery extends JPlugin
 	 * Payment plugin wants to display some information on Item View (Detail View) page
 	 * */
 	/*
-	public function PCPonItemBeforeEndPricePanel($context, &$item, &$params) {
+	public function onPCPonItemBeforeEndPricePanel($context, &$item, &$params) {
 		//return "<div></div>";
 	}
 	*/
