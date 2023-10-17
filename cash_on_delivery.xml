@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="plugin" group="pcp" method="upgrade" version="4.0">
+<extension type="plugin" group="pcp" method="upgrade" version="5.0">
 	<name>plg_pcp_cash_on_delivery</name>
 	<author>Jan Pavelka (www.phoca.cz)</author>
-	<creationDate>04/05/2023</creationDate>
+	<creationDate>17/10/2023</creationDate>
 	<authorEmail></authorEmail>
 	<authorUrl>https://www.phoca.cz</authorUrl>
 	<copyright>Jan Pavelka</copyright>
 	<license>GNU/GPL</license>
-	<version>4.0.7</version>
+	<version>5.0.0Beta</version>
 	<description>PLG_PCP_CASH_ON_DELIVERY_DESCRIPTION</description>
 	<projectName>PhocaCartCashOnDeliveryPlugin</projectName>
 
@@ -15,6 +15,7 @@
 		<folder>helpers</folder>
 		<filename plugin="cash_on_delivery">index.html</filename>
 		<filename plugin="cash_on_delivery">cash_on_delivery.php</filename>
+		<filename plugin="cash_on_delivery">manifest.xml</filename>
 	</files>
 
 	<languages>

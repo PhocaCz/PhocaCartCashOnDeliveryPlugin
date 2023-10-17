@@ -8,13 +8,14 @@
  */
 
 defined('_JEXEC') or die;
+use Joomla\CMS\Plugin\CMSPlugin;
 jimport( 'joomla.plugin.plugin' );
 jimport( 'joomla.filesystem.file');
 jimport( 'joomla.html.parameter' );
 
 JLoader::registerPrefix('Phocacart', JPATH_ADMINISTRATOR . '/components/com_phocacart/libraries/phocacart');
 
-class plgPCPCash_On_Delivery extends JPlugin
+class plgPCPCash_On_Delivery extends CMSPlugin
 {
 
 	protected $name 	= 'cash_on_delivery';
