@@ -26,12 +26,11 @@
 		<element>cash_on_delivery</element>
 		<folder>pcp</folder>
 		<type>plugin</type>
-		<version>4.0.9</version>
-		<infourl title="Phoca Cart Cash On Delivery Plugin 4.0.9">https://www.phoca.cz/</infourl>
+		<version>4.0.11</version>
+		<infourl title="Phoca Cart Cash On Delivery Plugin 4.0.11">https://www.phoca.cz/</infourl>
 		<downloads>
-			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartCashOnDeliveryPlugin/releases/download/4.0.9/plg_pcp_cash_on_delivery_v4.0.9.zip</downloadurl>
+			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartCashOnDeliveryPlugin/releases/download/4.0.11/plg_pcp_cash_on_delivery_v4.0.11.zip</downloadurl>
 		</downloads>
-		<sha512>bb1200b19037a65c3a84ffa5bf804630d138e1d647a800e8b49e644d2a55f31c90ba34fde0bfe40fbbabb4cd83443de67842c8620259da3d0063d438f85ed750</sha512>
 		<tags>
 			<tag>stable</tag>
 		</tags>
@@ -41,5 +40,25 @@
 		<targetplatform name="joomla" version="4\.*"/>
 		<client>site</client>
 	</update>
-
+	<update>
+		<name><![CDATA[ Phoca Cart Cash On Delivery Plugin ]]></name>
+		<description><![CDATA[ Phoca Cart Payment - Cash On Delivery Plugin - payment method for Phoca Cart component. This plugin is included in core Phoca Cart package. ]]></description>
+		<element>cash_on_delivery</element>
+		<folder>pcp</folder>
+		<type>plugin</type>
+		<version>5.1.1</version>
+		<infourl title="Phoca Cart Cash On Delivery Plugin 5.1.1">https://www.phoca.cz/</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/PhocaCz/PhocaCartCashOnDeliveryPlugin/releases/download/5.1.1/plg_pcp_cash_on_delivery_v5.1.1.zip</downloadurl>
+		</downloads>
+		<sha512>c8eb23026b37c0e6f6cf3ae4424bc03f420ee10f2450db2fab2aed120f50153572ef168cef413156c8eb06a816768ab619c07d3c2de353d64447fd76c8c9f123</sha512>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<maintainer><![CDATA[ Phoca.cz ]]></maintainer>
+		<maintainerurl>https://www.phoca.cz/</maintainerurl>
+		<section>Updates</section>
+		<targetplatform name="joomla" version="5\.*"/>
+		<client>site</client>
+	</update>
 </updates>
