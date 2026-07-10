@@ -19,6 +19,7 @@ class plgPCPCash_On_Delivery extends CMSPlugin
 {
 
 	protected $name 	= 'cash_on_delivery';
+	protected $autoloadLanguage = true;
 
 	function __construct(& $subject, $config) {
 		parent :: __construct($subject, $config);
